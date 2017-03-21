@@ -19,6 +19,23 @@ public class SecondBank {
 		} 
 	} 
 	
+	public boolean withdraw(double amount) {
+		if (amount <= 0){ 
+			 System.out.println("amount cannot be negative");
+			 return false; 
+		}
+		
+		if(isOverdraft == true){
+			System.out.println("account is overdraft");
+			return false; 
+		}
+		balance = balance - amount;
+		if (balance < 0){ 
+			 isOverdraft = true; 
+		}
+		return true;
+	} 
+	
 	
 	
 }
