@@ -12,6 +12,7 @@ public class BankAccount {
 				isOverdraft = false;
 			}
 			return true; 
+			
 		}else{
 			System.out.println("amount cannot be negative"); 
 			return false;
